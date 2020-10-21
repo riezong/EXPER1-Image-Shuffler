@@ -49,7 +49,7 @@ function setup() {
   // Countdown timer setup
   timerTitle = 3000;
   timerRotate = 1000;
-  timer = millis() + timerTitle;
+  timer = millis() + timerRotate;
   state = 0;
 
   // Typography (Totally optional)
@@ -58,7 +58,7 @@ function setup() {
   textSize(16);
 
   posX = (width / 2 - 200);
-  posY = (height / 2 - 150);
+  posY = (10);
 }
 
 function draw() {
@@ -86,6 +86,7 @@ function draw() {
 
   // Image shuffler
   if (scene == 1) {
+    background('#333333');
 
     img = createImg(names[i], "");
     image(img, posX, posY, 400, 300);
