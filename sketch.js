@@ -87,12 +87,6 @@ function draw() {
   // Image shuffler
   if (scene == 2) {
 
-    // Load image
-    // img = loadImage(names[i]);
-    // print(names[i]);
-    // img.resize(width, height);
-    // image(img, 0, 0);
-
     img = createImg(names[i], "");
     image(img, posX, posY, 400, 300);
     img.hide();
