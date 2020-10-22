@@ -35,7 +35,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, 340);
   background('#000000');
 
   savedTime = millis();
@@ -58,7 +58,7 @@ function setup() {
   textSize(16);
 
   posX = (width / 2 - 200);
-  posY = (10);
+  posY = (20);
 }
 
 function draw() {
