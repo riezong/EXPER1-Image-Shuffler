@@ -35,7 +35,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, 340);
+  createCanvas(windowWidth, windowHeight);
   background('#000000');
 
   savedTime = millis();
@@ -58,34 +58,34 @@ function setup() {
   textSize(16);
 
   posX = (width / 2 - 200);
-  posY = (20);
+  posY = (height / 2 - 150);
 }
 
 function draw() {
 
-  // // Titles
-  // if (scene == 1) {
-  //   background(0);
-  //   textAlign(CENTER, CENTER);
-  //   fill(255);
-  //   text("Experiment 1: Shuffled Images", width / 2, height / 2 - 10);
-  //   text("Saul Bass 'Psycho' storyboards", width / 2, height / 2 + 10);
+  // Titles
+  if (scene == 1) {
+    background(0);
+    textAlign(CENTER, CENTER);
+    fill(255);
+    text("Experiment 1: Shuffled Images", width / 2, height / 2 - 10);
+    text("Saul Bass 'Psycho' storyboards", width / 2, height / 2 + 10);
 
-  //   // Timer
-  //   countdown = ceil((timer - millis()) / 1000);
-  //   if (state == 0) {} else if (state == 1) {
-  //     background(0);
-  //     scene = 2;
-  //     state = 0;
-  //   }
-  //   if (timer < millis()) {
-  //     timer = millis() + timerRotate;
-  //     state = 1;
-  //   }
-  // }
+    // Timer
+    countdown = ceil((timer - millis()) / 1000);
+    if (state == 0) {} else if (state == 1) {
+      background(0);
+      scene = 2;
+      state = 0;
+    }
+    if (timer < millis()) {
+      timer = millis() + timerRotate;
+      state = 1;
+    }
+  }
 
   // Image shuffler
-  if (scene == 1) {
+  if (scene == 2) {
     background('#333333');
 
     img = createImg(names[i], "");
